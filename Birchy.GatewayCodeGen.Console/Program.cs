@@ -1,5 +1,5 @@
-﻿using Birchy.GatewayCodeGen.Console.Core;
-using Birchy.GatewayCodeGen.Core;
+﻿using Birchy.GatewayCodeGen.Core;
+using Birchy.GatewayCodeGen.Engine;
 
 namespace Birchy.GatewayCodeGen.Console
 {

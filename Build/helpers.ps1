@@ -73,7 +73,7 @@ function Run-Tests
 						  -targetargs:$targetArgs `
 						  -output:$coveragePath `
 						  -register:user `
-						  -filter:$filter `
+						  "-filter:$filter" `
 						  -excludebyattribute:$excludeByAttribute `
 						  -excludebyfile: $excludeByFile `
 						  -skipautoprops `

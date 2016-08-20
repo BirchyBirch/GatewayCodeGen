@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection;
 
 namespace Headspring
 {
+    [ExcludeFromCodeCoverage]
     [Serializable]
     [DebuggerDisplay("{DisplayName} - {Value}")]
     public abstract class Enumeration<TEnumeration> : Enumeration<TEnumeration, int>
@@ -26,6 +28,7 @@ namespace Headspring
         }
     }
 
+    [ExcludeFromCodeCoverage]
     [Serializable]
     [DebuggerDisplay("{DisplayName} - {Value}")]
     public abstract class Enumeration<TEnumeration, TValue> : IComparable<TEnumeration>, IEquatable<TEnumeration>

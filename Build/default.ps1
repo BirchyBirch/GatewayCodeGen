@@ -15,7 +15,7 @@ properties {
 
 	$testCoverageDirectory = "$outputDirectory\TestCoverage"
 	$testCoverageReportPath = "$testCoverageDirectory\OpenCover.xml"
-	$testCoverageFilter = "-[xunit.*] +[Birchy.*]"
+	$testCoverageFilter = "+[*]* -[xunit.*]* -[UnitTests]*"
 	$testCoverageExcludeByAttribute = "*.ExcludeFromCodeCoverage*"
 	$testCoverageExcludeByFile = "*\*Designer.cs;*\*.g.cs;*\*.g.i.cs"
 
