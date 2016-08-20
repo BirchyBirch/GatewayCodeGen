@@ -1,4 +1,4 @@
-﻿namespace Birchy.GatewayCodeGen.Core
+﻿namespace Birchy.GatewayCodeGen.Core.Database
 {
     public class DatabaseColumnDefinition
     {

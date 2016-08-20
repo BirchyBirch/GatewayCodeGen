@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Birchy.GatewayCodeGen.Core;
+using Birchy.GatewayCodeGen.Core.Database;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;

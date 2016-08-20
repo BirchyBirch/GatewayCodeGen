@@ -1,4 +1,5 @@
 ﻿using Birchy.GatewayCodeGen.Core;
+using Birchy.GatewayCodeGen.Core.Database;
 using Birchy.GatewayCodeGen.Engine;
 using Xunit;
 
