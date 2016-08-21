@@ -41,11 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CodeGenerationConfiguration.cs" />
-    <Compile Include="DatabaseColumnDefinition.cs" />
-    <Compile Include="DatabaseTableDefinition.cs" />
+    <Compile Include="Database\DatabaseColumnDefinition.cs" />
+    <Compile Include="Database\DatabaseTableDefinition.cs" />
     <Compile Include="Headspring\Enumeration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlDataType.cs" />
+    <Compile Include="Database\SqlDataType.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Headspring\LICENSE.txt" />

@@ -1,6 +1,6 @@
 ﻿using Headspring;
 
-namespace Birchy.GatewayCodeGen.Core
+namespace Birchy.GatewayCodeGen.Core.Database
 {
     public class SqlDataType : Enumeration<SqlDataType, string>
     {
