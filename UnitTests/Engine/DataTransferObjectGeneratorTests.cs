@@ -3,7 +3,7 @@ using Birchy.GatewayCodeGen.Core.Database;
 using Birchy.GatewayCodeGen.Engine;
 using Xunit;
 
-namespace UnitTests
+namespace UnitTests.Engine
 {
     public class DataTransferObjectGeneratorTests
     {

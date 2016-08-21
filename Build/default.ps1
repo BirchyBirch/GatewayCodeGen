@@ -32,11 +32,16 @@ properties {
 	$reportGeneratorExe = (Find-PackagePath $packagesPath "ReportGenerator") + "\Tools\ReportGenerator.exe"
 	$7ZipExe = (Find-PackagePath $packagesPath "7-Zip.CommandLine" ) + "\Tools\7za.exe"
 	$nugetExe = (Find-PackagePath $packagesPath "NuGet.CommandLine" ) + "\Tools\NuGet.exe"
+	$roundhouseExe = (Find-PackagePath $packagesPath "Roundhouse" ) +"\bin\rh.exe"
+
+	$databaseName = "CurrencyTestDatabase"
+	$server = "(local)\sqlexpress"
+	$databaseFilesDir = "$solutionDirectory\Database"
 }
 
 task default -depends FullBuild
 
-task compileWithCover -depends Test
+task compileWithCover -depends Test, BuildDatabase
 
 FormatTaskName "`r`n`r`n-------- Executing {0} Task --------"
 
@@ -106,6 +111,11 @@ task TestXUnit `
 			  -excludebyfile: $testCoverageExcludeByFile
 }
 
+task BuildDatabase{
+	Exec{
+		& $roundhouseExe -d $databaseName -s $server -f $databaseFilesDir --silent
+	}
+}
 
 task Test `
 	-depends Compile, TestXUnit  `

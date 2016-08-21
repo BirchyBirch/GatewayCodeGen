@@ -1,1 +1,1 @@
-# GatewayCodeGen
+# Poco and DAL Generator for SqlServer
