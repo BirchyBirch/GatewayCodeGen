@@ -1,11 +1,12 @@
 ﻿using System.Linq;
 using Birchy.GatewayCodeGen.Core;
+using Birchy.GatewayCodeGen.Core.Database;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.CodeAnalysis.Formatting;
 
-namespace Birchy.GatewayCodeGen.Console.Core
+namespace Birchy.GatewayCodeGen.Engine
 {
     public class DataTransferObjectGenerator
     {
@@ -23,16 +24,20 @@ namespace Birchy.GatewayCodeGen.Console.Core
                         )
                 );
             var adhocWorkspace = new AdhocWorkspace();
-            var syntaxNode = Formatter.Format(compilationUnitSyntax, adhocWorkspace);            
+            var syntaxNode = Formatter.Format(compilationUnitSyntax, adhocWorkspace);
             return syntaxNode.ToFullString();
         }
 
         private static MemberDeclarationSyntax[] BuildPropertyMembers(DatabaseTableDefinition tableDefinition)
-        {            
-            return tableDefinition.Columns.Select(CreatePropertyDeclarationSyntax).Cast<MemberDeclarationSyntax>().ToArray();
+        {
+            return
+                tableDefinition.Columns.Select(CreatePropertyDeclarationSyntax)
+                    .Cast<MemberDeclarationSyntax>()
+                    .ToArray();
         }
 
-        private static PropertyDeclarationSyntax CreatePropertyDeclarationSyntax(DatabaseColumnDefinition columnDefinition)
+        private static PropertyDeclarationSyntax CreatePropertyDeclarationSyntax(
+            DatabaseColumnDefinition columnDefinition)
         {
             return SyntaxFactory.PropertyDeclaration(
                     SyntaxFactory.ParseTypeName(columnDefinition.FullCSharpType), columnDefinition.Name)
