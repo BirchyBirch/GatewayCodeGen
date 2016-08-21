@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Birchy.GatewayCodeGen.Data
+namespace Birchy.GatewayCodeGen.Repository
 {
     public class Class1
     {
