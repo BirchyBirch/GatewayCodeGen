@@ -34,7 +34,7 @@ properties {
 	$nugetExe = (Find-PackagePath $packagesPath "NuGet.CommandLine" ) + "\Tools\NuGet.exe"
 	$roundhouseExe = (Find-PackagePath $packagesPath "Roundhouse" ) +"\bin\rh.exe"
 
-	$databaseName = "CurrencyTestDatabase"
+	$databaseName = "CardShop"
 	$server = "(local)\sqlexpress"
 	$databaseFilesDir = "$solutionDirectory\Database"
 }

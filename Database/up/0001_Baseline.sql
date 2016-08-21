@@ -1,7 +1,7 @@
-CREATE SCHEMA Currency;
+CREATE SCHEMA Customer;
 GO 
-CREATE TABLE Currency.CurrencyMaster
+CREATE TABLE Customer.Customer
 (
-	CurrencyMasterId int identity(1,1) NOT NULL	
-		CONSTRAINT PK_CurrencyMaster_CurrencyMasterId PRIMARY KEY	
+	CustomerId int identity(1,1) NOT NULL	
+		CONSTRAINT PK_Customer_CustomerId PRIMARY KEY
 )
