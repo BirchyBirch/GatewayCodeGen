@@ -113,6 +113,7 @@ task TestXUnit `
 
 task BuildDatabase{
 	Exec{
+		& $roundhouseExe --drop -d $databaseName -s $server --silent
 		& $roundhouseExe -d $databaseName -s $server -f $databaseFilesDir --silent
 	}
 }
