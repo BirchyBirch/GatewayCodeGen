@@ -7,8 +7,8 @@ namespace Birchy.GatewayCodeGen.Core
     {
         public static string ToCamelCase(this string source)
         {
-            var generateSlug = source.GenerateSlug();
-            if (generateSlug == source.ToLowerInvariant())
+            var generateSlug = source.ToSlug();
+            if (generateSlug == source.ToLowerInvariant()&&!generateSlug.Contains("-"))
             {
                 var charArray = source.ToCharArray();
                 charArray[0] = char.ToLower(charArray[0]);
@@ -39,7 +39,7 @@ namespace Birchy.GatewayCodeGen.Core
 
         }
         //From: http://predicatet.blogspot.com/2009/04/improved-c-slug-generator-or-how-to.html
-        public static string GenerateSlug(this string phrase)
+        public static string ToSlug(this string phrase)
         {
             string str = phrase.RemoveAccent().ToLower();
             str = str.Replace("_", " ");

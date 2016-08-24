@@ -68,5 +68,56 @@ namespace UnitTests.Engine
             Assert.Contains("public decimal? BirchyWeight", generateCode);
             Assert.Contains("namespace Birchy.Core", generateCode);
         }
+
+        [Fact]
+        public void GenerateCode_CreatesCorrectDtoSourceCode_UgleColumnNames()
+        {
+            var dataTransferObjectGenerator = GetGenerator();
+            var codeGenerationConfiguration = new CodeGenerationConfiguration { CoreNamespace = "Birchy.Core" };
+            var databaseTableDefinition = new DatabaseTableDefinition
+            {
+                Name = "TestTable",
+                ObjectId = 101,
+                SchemaName = "dbo",
+                Columns = new[]
+                {
+                    new DatabaseColumnDefinition
+                    {
+                        Name = "Foo_Id",
+                        IsIdentity = true,
+                        IsNullable = true,
+                        SqlDataType = SqlDataType.Integer
+                    },
+                    new DatabaseColumnDefinition
+                    {
+                        Name = "bar_id",
+                        IsIdentity = false,
+                        IsNullable = false,
+                        SqlDataType = SqlDataType.Integer
+                    },
+                    new DatabaseColumnDefinition
+                    {
+                        Name = "BazName",
+                        SqlDataType = SqlDataType.NVarchar,
+                        IsNullable = true,
+                        IsIdentity = false
+                    },
+                    new DatabaseColumnDefinition
+                    {
+                        Name = "birchy_weight",
+                        SqlDataType = SqlDataType.Decimal,
+                        IsIdentity = false,
+                        IsNullable = true
+                    }
+                }
+            };
+            var generateCode = dataTransferObjectGenerator.GenerateCode(codeGenerationConfiguration, databaseTableDefinition);
+            Assert.Contains("public class TestTableDto", generateCode);
+            Assert.Contains("public int? FooId", generateCode);
+            Assert.Contains("public int BarId", generateCode);
+            Assert.Contains("public string BazName", generateCode);
+            Assert.Contains("public decimal? BirchyWeight", generateCode);
+            Assert.Contains("namespace Birchy.Core", generateCode);
+        }
     }
 }

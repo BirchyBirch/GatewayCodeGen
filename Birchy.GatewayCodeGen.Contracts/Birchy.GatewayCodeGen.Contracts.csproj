@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="IColumnInfoGateway.cs" />
     <Compile Include="IDatabaseSettings.cs" />
+    <Compile Include="IDatabaseTableInfoRepository.cs" />
+    <Compile Include="IDataTransferObjectGenerator.cs" />
+    <Compile Include="ISqlGenerator.cs" />
     <Compile Include="ITableInfoGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

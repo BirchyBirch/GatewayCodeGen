@@ -25,7 +25,8 @@ namespace UnitTests.Core
                 {
                     new[] {"it_was_the_best_of_Times", "ItWasTheBestOfTimes"},
                     new[] {"ItWasTheWorstOfTimes", "ItWasTheWorstOfTimes"},
-                    new[] {"arma virumque cano", "ArmaVirumqueCano"}
+                    new[] {"arma virumque cano", "ArmaVirumqueCano"},
+                    new [] { "Nameb048dd46-bcba-4b6a-a9a4-d96852a73e6a", "Nameb048dd46Bcba4b6aA9a4D96852a73e6a" }
                 };
             }
         }

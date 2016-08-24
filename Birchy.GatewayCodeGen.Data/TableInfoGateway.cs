@@ -5,7 +5,7 @@ namespace Birchy.GatewayCodeGen.Data
 {
     public class TableInfoGateway : GatewayBase, ITableInfoGateway
     {
-        public TableInfoGateway(IDatabaseSettings settings) : base(settings)
+        public TableInfoGateway(string connectionString) : base(connectionString)
         {
         }
 
@@ -17,5 +17,5 @@ namespace Birchy.GatewayCodeGen.Data
                                 from	sys.tables";
             return GetFromDatabase<TableInfoDto>(sql, null);
         }
-    }
+    }    
 }

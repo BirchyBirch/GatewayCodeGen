@@ -45,6 +45,7 @@
     <Compile Include="Database\DatabaseColumnDefinition.cs" />
     <Compile Include="Database\DatabaseTableDefinition.cs" />
     <Compile Include="Database\TableInfoDto.cs" />
+    <Compile Include="GeneratedCode.cs" />
     <Compile Include="Headspring\Enumeration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Database\SqlDataType.cs" />

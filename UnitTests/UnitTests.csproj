@@ -57,6 +57,10 @@
       <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.1.0.0\lib\net45\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Ploeh.AutoFixture, Version=3.50.1.0, Culture=neutral, PublicKeyToken=b24654c590009d4f, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoFixture.3.50.1\lib\net40\Ploeh.AutoFixture.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Collections.Immutable, Version=1.1.36.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.1.36\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
@@ -112,6 +116,7 @@
     <Compile Include="Engine\GatewayBaseObjectGeneratorTestFixture.cs" />
     <Compile Include="Engine\GatewayBaseObjectGeneratorTests.cs" />
     <Compile Include="Engine\SettingsObjectGeneratorTests.cs" />
+    <Compile Include="Engine\SqlGenerator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +124,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Contracts\Birchy.GatewayCodeGen.Contracts.csproj">
+      <Project>{bd3733d5-28e0-4411-a251-aa50e3118cc1}</Project>
+      <Name>Birchy.GatewayCodeGen.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Birchy.GatewayCodeGen.Core.csproj">
       <Project>{5BC3E312-44AF-4700-9041-BD000CE9FF5F}</Project>
       <Name>Birchy.GatewayCodeGen.Core</Name>

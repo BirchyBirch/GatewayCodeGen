@@ -3,6 +3,7 @@
     public class DatabaseColumnDefinition
     {
         public string Name { get; set; }
+        public string FormattedName => Name.ToPascalCase();
         public SqlDataType SqlDataType { get; set; }
 
         public bool IsIdentity { get; set; }
@@ -18,4 +19,6 @@
             }
         }
     }
+
+
 }

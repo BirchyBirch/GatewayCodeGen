@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>9c47a8ef-a83f-48bf-958f-55fe6cf055c3</ProjectGuid>
+    <ProjectGuid>{9C47A8EF-A83F-48BF-958F-55FE6CF055C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Birchy.GatewayCodeGen.Repository</RootNamespace>
@@ -30,24 +30,33 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="System"/>
-    
-    <Reference Include="System.Core"/>
-    <Reference Include="System.Xml.Linq"/>
-    <Reference Include="System.Data.DataSetExtensions"/>
-    
-    
-    <Reference Include="Microsoft.CSharp"/>
-    
-    <Reference Include="System.Data"/>
-    
-    <Reference Include="System.Net.Http"/>
-    
-    <Reference Include="System.Xml"/>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="CodeGenerationRepository.cs" />
+    <Compile Include="DatabaseTableInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Contracts\Birchy.GatewayCodeGen.Contracts.csproj">
+      <Project>{BD3733D5-28E0-4411-A251-AA50E3118CC1}</Project>
+      <Name>Birchy.GatewayCodeGen.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Birchy.GatewayCodeGen.Core.csproj">
+      <Project>{5BC3E312-44AF-4700-9041-BD000CE9FF5F}</Project>
+      <Name>Birchy.GatewayCodeGen.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Data\Birchy.GatewayCodeGen.Data.csproj">
+      <Project>{FB704509-F111-4F27-B928-68E897097758}</Project>
+      <Name>Birchy.GatewayCodeGen.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
@@ -57,5 +66,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
- </Project>
+</Project>

@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using Birchy.GatewayCodeGen.Contracts;
 using Birchy.GatewayCodeGen.Core;
 using Birchy.GatewayCodeGen.Core.Database;
 using Microsoft.CodeAnalysis;
@@ -8,7 +9,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 namespace Birchy.GatewayCodeGen.Engine
 {
-    public class DataTransferObjectGenerator
+    public class DataTransferObjectGenerator : IDataTransferObjectGenerator
     {
         public string GenerateCode(CodeGenerationConfiguration config, DatabaseTableDefinition tableDefinition)
         {
@@ -40,7 +41,7 @@ namespace Birchy.GatewayCodeGen.Engine
             DatabaseColumnDefinition columnDefinition)
         {
             return SyntaxFactory.PropertyDeclaration(
-                    SyntaxFactory.ParseTypeName(columnDefinition.FullCSharpType), columnDefinition.Name)
+                    SyntaxFactory.ParseTypeName(columnDefinition.FullCSharpType), columnDefinition.FormattedName)
                 .AddAccessorListAccessors(
                     SyntaxFactory.AccessorDeclaration(SyntaxKind.GetAccessorDeclaration)
                         .WithSemicolonToken(SyntaxFactory.Token(SyntaxKind.SemicolonToken)),

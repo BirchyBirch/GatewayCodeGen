@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ColumnInfoGateway.cs" />
     <Compile Include="GatewayBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableInfoGateway.cs" />

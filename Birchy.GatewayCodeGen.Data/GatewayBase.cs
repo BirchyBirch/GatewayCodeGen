@@ -7,16 +7,16 @@ namespace Birchy.GatewayCodeGen.Data
 {
     public abstract class GatewayBase
     {
-        private readonly IDatabaseSettings _settings;
+        private readonly string _connectionString;
 
-        protected GatewayBase(IDatabaseSettings settings)
+        protected GatewayBase(string connectionString)
         {
-            _settings = settings;
+            _connectionString = connectionString;
         }
 
         private SqlConnection ConnectionFactory()
         {
-            return new SqlConnection(_settings.ConnectionString);
+            return new SqlConnection(_connectionString);
         }
 
         protected T[] GetFromDatabase<T>(string sql, object param)
