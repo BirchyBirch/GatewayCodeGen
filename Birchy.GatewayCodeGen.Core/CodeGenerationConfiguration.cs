@@ -3,7 +3,14 @@
     public class CodeGenerationConfiguration
     {
         private string _dalBaseClassName;
-        public string CoreNamespace { get; set; }
+        private string _coreNamespace;
+
+        public string CoreNamespace
+        {
+            get { return _coreNamespace?.Replace(" ",string.Empty); }
+            set { _coreNamespace = value; }
+        }
+
         public string DataNamespace { get; set; }
         public string ContractNamespace { get; set; }
         public string DatabaseName { get; set; }

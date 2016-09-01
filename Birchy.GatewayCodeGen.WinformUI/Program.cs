@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Birchy.GatewayCodeGen.Engine;
+using Birchy.GatewayCodeGen.Engine.SQL;
+using Birchy.GatewayCodeGen.Repository;
 
 namespace Birchy.GatewayCodeGen.WinformUI
 {
@@ -16,7 +19,11 @@ namespace Birchy.GatewayCodeGen.WinformUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CodeGenerator());
+            var codeGenerationRepository = new CodeGenerationRepository(
+                    new DatabaseTableInfoRepository(),
+                    new DataTransferObjectGenerator(),
+                    new SqlGenerator());
+            Application.Run(new CodeGenerator(codeGenerationRepository));
         }
     }
 }
