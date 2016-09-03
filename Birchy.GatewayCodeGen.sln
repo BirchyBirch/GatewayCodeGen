@@ -5,25 +5,25 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Build", "Build\Build.csproj", "{06087938-1A5A-4A49-84B6-176E54ED8C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Console", "Birchy.GatewayCodeGen.Console\Birchy.GatewayCodeGen.Console.csproj", "{5A334778-D758-4742-9037-E31059F76B66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Birchy.GatewayCodeGen.Core\Core.csproj", "{5BC3E312-44AF-4700-9041-BD000CE9FF5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Core", "Birchy.GatewayCodeGen.Core\Birchy.GatewayCodeGen.Core.csproj", "{5BC3E312-44AF-4700-9041-BD000CE9FF5F}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Engine", "Birchy.GatewayCodeGen.Engine\Birchy.GatewayCodeGen.Engine.csproj", "{B47B7B68-9133-457F-A805-B74A4E049F02}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Engine", "Birchy.GatewayCodeGen.Engine\Engine.csproj", "{B47B7B68-9133-457F-A805-B74A4E049F02}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{8582F1FC-B4B1-442A-9E9F-449E679E4C72}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTests", "UnitTests\UnitTests.csproj", "{5305D9B7-F40A-477A-9D60-53A0F1CF147D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Data", "Birchy.GatewayCodeGen.Data\Birchy.GatewayCodeGen.Data.csproj", "{FB704509-F111-4F27-B928-68E897097758}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Birchy.GatewayCodeGen.Data\Data.csproj", "{FB704509-F111-4F27-B928-68E897097758}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Contracts", "Birchy.GatewayCodeGen.Contracts\Birchy.GatewayCodeGen.Contracts.csproj", "{BD3733D5-28E0-4411-A251-AA50E3118CC1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "Birchy.GatewayCodeGen.Contracts\Contracts.csproj", "{BD3733D5-28E0-4411-A251-AA50E3118CC1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.Repository", "Birchy.GatewayCodeGen.Repository\Birchy.GatewayCodeGen.Repository.csproj", "{9C47A8EF-A83F-48BF-958F-55FE6CF055C3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Birchy.GatewayCodeGen.Repository\Repository.csproj", "{9C47A8EF-A83F-48BF-958F-55FE6CF055C3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{8885B7E8-6DB0-4A77-9178-B8434EA5453A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Birchy.GatewayCodeGen.WinformUI", "Birchy.GatewayCodeGen.WinformUI\Birchy.GatewayCodeGen.WinformUI.csproj", "{1BEBBAC4-CAF4-4CEE-9059-9539EBA6F389}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI", "Birchy.GatewayCodeGen.UI\UI.csproj", "{9E8BB04E-0F7E-497F-92E6-43E9D54419C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Composition", "Birchy.GatewayCodeGen.Composition\Composition.csproj", "{A20FE8F2-C1AD-493B-80C4-6512FE94C28D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,6 @@ Global
 		{06087938-1A5A-4A49-84B6-176E54ED8C89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06087938-1A5A-4A49-84B6-176E54ED8C89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06087938-1A5A-4A49-84B6-176E54ED8C89}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A334778-D758-4742-9037-E31059F76B66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A334778-D758-4742-9037-E31059F76B66}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A334778-D758-4742-9037-E31059F76B66}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A334778-D758-4742-9037-E31059F76B66}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5BC3E312-44AF-4700-9041-BD000CE9FF5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5BC3E312-44AF-4700-9041-BD000CE9FF5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BC3E312-44AF-4700-9041-BD000CE9FF5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -67,10 +63,14 @@ Global
 		{8885B7E8-6DB0-4A77-9178-B8434EA5453A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8885B7E8-6DB0-4A77-9178-B8434EA5453A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8885B7E8-6DB0-4A77-9178-B8434EA5453A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1BEBBAC4-CAF4-4CEE-9059-9539EBA6F389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1BEBBAC4-CAF4-4CEE-9059-9539EBA6F389}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1BEBBAC4-CAF4-4CEE-9059-9539EBA6F389}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1BEBBAC4-CAF4-4CEE-9059-9539EBA6F389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8BB04E-0F7E-497F-92E6-43E9D54419C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8BB04E-0F7E-497F-92E6-43E9D54419C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8BB04E-0F7E-497F-92E6-43E9D54419C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8BB04E-0F7E-497F-92E6-43E9D54419C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20FE8F2-C1AD-493B-80C4-6512FE94C28D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20FE8F2-C1AD-493B-80C4-6512FE94C28D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20FE8F2-C1AD-493B-80C4-6512FE94C28D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20FE8F2-C1AD-493B-80C4-6512FE94C28D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

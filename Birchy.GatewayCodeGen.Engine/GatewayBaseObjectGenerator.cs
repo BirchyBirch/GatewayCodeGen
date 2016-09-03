@@ -1,11 +1,12 @@
-﻿using Birchy.GatewayCodeGen.Core;
+﻿using Birchy.GatewayCodeGen.Contracts;
+using Birchy.GatewayCodeGen.Core;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
 
 namespace Birchy.GatewayCodeGen.Engine
 {
-    public class GatewayBaseObjectGenerator
+    public class GatewayBaseObjectGenerator : IGatewayBaseObjectGenerator
     {
         private const string SettingsInterfaceName = "IDatabaseSettings";
         private const string SettingsFieldName = "DatabaseSettings";
@@ -17,7 +18,7 @@ namespace Birchy.GatewayCodeGen.Engine
         private static readonly AdhocWorkspace Workspace = new AdhocWorkspace();
 
         public string GenerateGatewayBaseObject(CodeGenerationConfiguration configuration)
-        {            
+        {                        
             var compilationUnit = SyntaxFactory.CompilationUnit()
                 .AddUsings(GenerateUsings())
                 .AddMembers(configuration.DataNamespaceSyntax()
@@ -109,4 +110,5 @@ namespace Birchy.GatewayCodeGen.Engine
             };
         }
     }
+    
 }

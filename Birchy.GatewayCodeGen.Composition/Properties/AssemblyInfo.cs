@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Birchy.GatewayCodeGen.WinformUI")]
+[assembly: AssemblyTitle("Birchy.GatewayCodeGen.Composition")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Birchy.GatewayCodeGen.WinformUI")]
+[assembly: AssemblyProduct("Birchy.GatewayCodeGen.Composition")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1bebbac4-caf4-4cee-9059-9539eba6f389")]
+[assembly: Guid("a20fe8f2-c1ad-493b-80c4-6512fe94c28d")]
 
 // Version information for an assembly consists of the following four values:
 //
