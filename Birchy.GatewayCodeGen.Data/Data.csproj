@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ColumnInfoGateway.cs" />
+    <Compile Include="FileSystemCodeExporter.cs" />
     <Compile Include="GatewayBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TableInfoGateway.cs" />
@@ -53,13 +54,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Birchy.GatewayCodeGen.Contracts\Birchy.GatewayCodeGen.Contracts.csproj">
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Contracts\Contracts.csproj">
       <Project>{BD3733D5-28E0-4411-A251-AA50E3118CC1}</Project>
-      <Name>Birchy.GatewayCodeGen.Contracts</Name>
+      <Name>Contracts</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Birchy.GatewayCodeGen.Core.csproj">
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Core.csproj">
       <Project>{5BC3E312-44AF-4700-9041-BD000CE9FF5F}</Project>
-      <Name>Birchy.GatewayCodeGen.Core</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

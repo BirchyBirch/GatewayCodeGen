@@ -40,18 +40,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICodeGenerationRepository.cs" />
     <Compile Include="IColumnInfoGateway.cs" />
     <Compile Include="IDatabaseSettings.cs" />
     <Compile Include="IDatabaseTableInfoRepository.cs" />
     <Compile Include="IDataTransferObjectGenerator.cs" />
+    <Compile Include="IFileSystemCodeExporer.cs" />
+    <Compile Include="IGatewayBaseObjectGenerator.cs" />
+    <Compile Include="IGatewayGenerator.cs" />
     <Compile Include="ISqlGenerator.cs" />
     <Compile Include="ITableInfoGateway.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Birchy.GatewayCodeGen.Core.csproj">
+    <ProjectReference Include="..\Birchy.GatewayCodeGen.Core\Core.csproj">
       <Project>{5BC3E312-44AF-4700-9041-BD000CE9FF5F}</Project>
-      <Name>Birchy.GatewayCodeGen.Core</Name>
+      <Name>Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
