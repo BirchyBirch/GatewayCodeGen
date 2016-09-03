@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Birchy.GatewayCodeGen.WinformUI.Properties
+namespace Birchy.GatewayCodeGen.UI.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace Birchy.GatewayCodeGen.WinformUI.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Birchy.GatewayCodeGen.WinformUI.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Birchy.GatewayCodeGen.UI.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

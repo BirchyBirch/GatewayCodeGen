@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Birchy.GatewayCodeGen.WinformUI.Properties
+namespace Birchy.GatewayCodeGen.UI.Properties
 {
 
 

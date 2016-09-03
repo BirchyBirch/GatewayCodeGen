@@ -17,5 +17,11 @@ namespace Birchy.GatewayCodeGen.Data
                                 from	sys.tables";
             return GetFromDatabase<TableInfoDto>(sql, null);
         }
+
+        public int AddItems(TableInfoDto[] dtos)
+        {
+            const string sql = "";
+            return AddToDatabase(sql, dtos);
+        }
     }    
 }
